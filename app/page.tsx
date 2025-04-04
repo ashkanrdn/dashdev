@@ -272,7 +272,7 @@ export default function Home() {
                   <li className="space-y-1">
                     <div className="flex items-center gap-2">
                       <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
-                      <p className="font-medium text-sm">Results-Driven Approach</p>
+                      <p className="font-medium text-sm">Results-YO Driven Approach</p>
                     </div>
                     <p className="text-sm text-muted-foreground pl-4">
                       Focused on delivering measurable business outcomes
