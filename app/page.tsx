@@ -185,11 +185,10 @@ export default function Home() {
           <motion.div style={{ opacity, scale }} className="container relative z-10">
             <div className="max-w-3xl">
               <h1 className="text-5xl md:text-6xl font-light tracking-tight leading-tight">
-                Enterprise AI solutions that transform business outcomes
+              Big Data Intelligence Meets Decision-Ready Dashboards
               </h1>
               <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-                We help Fortune 500 companies leverage generative AI and data visualization to drive measurable growth
-              </p>
+              We build custom AI systems that transform complex data into real-time insights.              </p>
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
                 <Button className="group h-11 px-6 rounded-md">
                   <span>Book a consultation</span>
@@ -215,9 +214,7 @@ export default function Home() {
             <div className="max-w-xl">
               <h2 className="text-3xl font-light tracking-tight">About Dash-Dev</h2>
               <p className="mt-4 text-muted-foreground">
-                We're a team of AI specialists, data scientists, and visualization experts dedicated to transforming how
-                enterprises leverage their data. Our mission is to make advanced AI technologies accessible and
-                actionable for businesses of all sizes.
+              We are a team of AI engineers, lawyers, GIS experts, and computational designers specializing in generative AI models, real-time text mining, and predictive geospatial analytics and risks assesments. Together, we build full-stack dashboards, customized enterprise solutions, and automated data pipelines that extract, analyze, and visualize. We help you make sense of your data.
               </p>
             </div>
 
@@ -225,68 +222,65 @@ export default function Home() {
               <div>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div className="p-6 border border-border/40 rounded-md bg-card/30 hover:border-primary/30 transition-colors">
-                    <h3 className="text-xl font-light">15+ Years</h3>
-                    <p className="mt-2 text-sm text-muted-foreground">Combined experience in AI and data science</p>
+                    <h3 className="text-xl font-light"> Data Harvesting and Augmentation</h3>
+                    <p className="mt-2 text-sm text-muted-foreground">Web, PDFs, databases, and multilingual text and videos (20+ languages)</p>
                   </div>
 
                   <div className="p-6 border border-border/40 rounded-md bg-card/30 hover:border-primary/30 transition-colors">
-                    <h3 className="text-xl font-light">50+ Clients</h3>
-                    <p className="mt-2 text-sm text-muted-foreground">Across finance, healthcare, and technology</p>
+                    <h3 className="text-xl font-light"> Domain-Specific AI Models</h3>
+                    <p className="mt-2 text-sm text-muted-foreground">Legal | Geospatial | Finance | Built Environment </p>
                   </div>
 
                   <div className="p-6 border border-border/40 rounded-md bg-card/30 hover:border-primary/30 transition-colors">
-                    <h3 className="text-xl font-light">30+ Projects</h3>
-                    <p className="mt-2 text-sm text-muted-foreground">Successfully delivered on time and on budget</p>
+                    <h3 className="text-xl font-light">Dashboards </h3>
+                    <p className="mt-2 text-sm text-muted-foreground">Modular dashboards with real-time KPIs, predictive mapping, and automated reporting</p>
                   </div>
 
                   <div className="p-6 border border-border/40 rounded-md bg-card/30 hover:border-primary/30 transition-colors">
-                    <h3 className="text-xl font-light">4 Awards</h3>
-                    <p className="mt-2 text-sm text-muted-foreground">For innovation in AI implementation</p>
+                    <h3 className="text-xl font-light">Open-Source & Privacy-First</h3>
+                    <p className="mt-2 text-sm text-muted-foreground">Systems built on Privacy and Open source — auditable code, secure and zero licensing fees</p>
                   </div>
                 </div>
               </div>
 
               <div className="p-6 border border-border/40 rounded-md bg-card/30">
-                <h3 className="text-xl font-light mb-6">What Sets Us Apart</h3>
+                <h3 className="text-xl font-light mb-6">Our process</h3>
                 <ul className="space-y-6">
                   <li className="space-y-1">
                     <div className="flex items-center gap-2">
                       <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
-                      <p className="font-medium text-sm">End-to-End AI Solutions</p>
+                      <p className="font-medium text-sm">Collect</p>
                     </div>
                     <p className="text-sm text-muted-foreground pl-4">
-                      From strategy to implementation and optimization
+                    Data collection and aggregation from web, APIs, proprietary data, documents – structured or unstructured
                     </p>
                   </li>
 
                   <li className="space-y-1">
                     <div className="flex items-center gap-2">
                       <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
-                      <p className="font-medium text-sm">Industry-Specific Expertise</p>
+                      <p className="font-medium text-sm">Extract</p>
                     </div>
                     <p className="text-sm text-muted-foreground pl-4">
-                      Tailored solutions for your unique business challenges
+                    Enrich your data with metadata, risk scores, and predictive tags using domain-specific AI
                     </p>
                   </li>
 
                   <li className="space-y-1">
                     <div className="flex items-center gap-2">
                       <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
-                      <p className="font-medium text-sm">Results-YO Driven Approach</p>
+                      <p className="font-medium text-sm">Visualize</p>
                     </div>
                     <p className="text-sm text-muted-foreground pl-4">
-                      Focused on delivering measurable business outcomes
-                    </p>
-                  </li>
+                    Decision-ready dashboards: map insights to KPIs and generate reports in one click   </p>           </li>
 
                   <li className="space-y-1">
                     <div className="flex items-center gap-2">
                       <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
-                      <p className="font-medium text-sm">Cutting-Edge Technology</p>
+                      <p className="font-medium text-sm">Build</p>
                     </div>
                     <p className="text-sm text-muted-foreground pl-4">
-                      Access to the latest AI models and visualization tools
-                    </p>
+                    Custom and open-source solutions engineered for your workflows                   </p>
                   </li>
                 </ul>
               </div>
