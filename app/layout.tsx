@@ -9,8 +9,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Dash-Dev - Enterprise AI Solutions & Data Visualization | NYC",
-  description: "We help Fortune 500 companies leverage generative AI and data visualization to drive measurable growth",
+  title: "DashDev – Real-Time AI & Data Intelligence Solutions | Brooklyn",
+  description: "We help enterprises turn big data into actionable insight with custom AI systems, real-time dashboards, and geospatial intelligence.",
     generator: 'v0.dev'
 }
 
