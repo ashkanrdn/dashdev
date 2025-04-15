@@ -207,13 +207,13 @@ export default function Home() {
             <div className="absolute left-[60%] bottom-[10%] w-[600px] h-[600px] rounded-full bg-gradient-to-tr from-primary/10 to-transparent blur-3xl opacity-20"></div>
           </div>
         </section>
-
-        {/* About Section */}
+      {/* About Section */}
         <section id="about" className="py-28 border-t border-border/40 bg-background">
   <div className="container max-w-screen-xl">
-    <div className="grid lg:grid-cols-12 gap-16">
+    <div className="grid lg:grid-cols-12 gap-16 items-center">
+      
       {/* Left: About Text */}
-      <div className="lg:col-span-5 flex flex-col justify-center">
+      <div className="lg:col-span-5">
         <h2 className="text-4xl font-semibold tracking-tight text-foreground">About Dash-Dev</h2>
         <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
           We’re a cross-functional team of AI engineers, legal analysts, GIS experts, and computational designers. We build smart pipelines and scalable platforms using generative AI, multilingual text mining, and predictive spatial analytics — turning complexity into clarity.
@@ -242,19 +242,22 @@ export default function Home() {
         ].map((item, index) => (
           <motion.div
             key={index}
-            whileHover={{ y: -2 }}
-            transition={{ duration: 0.2 }}
-            className="group p-6 rounded-xl border border-border bg-card hover:shadow-lg transition-all duration-200 flex flex-col justify-between"
+            whileHover={{ y: -2, boxShadow: "0px 8px 20px rgba(0,0,0,0.08)" }}
+            transition={{ duration: 0.3 }}
+            className="group p-6 rounded-xl border border-border bg-card hover:border-primary hover:shadow-md transition-all duration-200"
           >
-            <h3 className="text-base font-semibold text-white mb-2 group-hover:text-primary">{item.title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
+            <h3 className="text-lg font-semibold text-white group-hover:text-primary mb-2">
+              {item.title}
+            </h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {item.text}
+            </p>
           </motion.div>
         ))}
       </div>
     </div>
   </div>
 </section>
-     
 
         {/* Clients Section */}
         <section className="py-24 border-t border-border/40 bg-background">
@@ -273,469 +276,381 @@ export default function Home() {
   </div>
 </section>       
 
-        {/* Solutions Section */}
-<section id="solutions" className="py-24 border-t border-border/40">
+<section id="solutions" className="py-28 border-t border-border/40 bg-background">
   <div className="container">
-    <div className="max-w-xl">
-      <h2 className="text-3xl font-light tracking-tight">Our Work</h2>
-      <p className="mt-4 text-muted-foreground">
+    <div className="max-w-2xl mx-auto text-center">
+      <h2 className="text-4xl font-semibold tracking-tight text-foreground">Our Work</h2>
+      <p className="mt-4 text-lg text-muted-foreground">
         We build smart, secure, and open tools to extract, analyze, and visualize complex data — from text and documents to geospatial layers and predictive models.
       </p>
     </div>
 
-    <div className="mt-16 grid gap-6 md:grid-cols-3">
-      <Card className="bg-card/50 border border-border/40 rounded-lg overflow-hidden hover:border-primary/50 transition-colors">
-        <CardContent className="p-6">
-          <div className="h-10 w-10 rounded-md bg-primary/10 flex items-center justify-center mb-4">
-            <Brain className="h-5 w-5 text-primary" />
-          </div>
-          <h3 className="text-xl font-medium mb-2">AI & Data Systems</h3>
-          <p className="text-muted-foreground text-sm mb-4">
-            Domain-specific AI to process multilingual text, legal data, spatial information, and unstructured sources.
-          </p>
-          <ul className="space-y-2 text-sm">
-            <li className="flex items-start gap-2">
-              <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-              <span>Custom LLMs for legal, geospatial, and financial data</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-              <span>Text mining across sources and in 20+ languages</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-              <span>Risk tagging and predictive scoring</span>
-            </li>
-          </ul>
-        </CardContent>
-      </Card>
-
-      <Card className="bg-card/50 border border-border/40 rounded-lg overflow-hidden hover:border-primary/50 transition-colors">
-        <CardContent className="p-6">
-          <div className="h-10 w-10 rounded-md bg-primary/10 flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
+    <div className="mt-20 grid gap-8 md:grid-cols-3">
+      {/* Solution Card */}
+      {[
+        {
+          title: "AI & Data Systems",
+          icon: <Brain className="h-5 w-5 text-primary" />,
+          description: "Domain-specific AI to process multilingual text, legal data, spatial information, and unstructured sources.",
+          bullets: [
+            "Custom LLMs for legal, geospatial, and financial data",
+            "Text mining across sources and in 20+ languages",
+            "Risk tagging and predictive scoring",
+          ],
+        },
+        {
+          title: "Dashboards & Visualization",
+          icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+              className="text-primary">
               <rect x="3" y="3" width="18" height="18" rx="2" />
               <path d="M3 9h18" />
               <path d="M9 21V9" />
             </svg>
-          </div>
-          <h3 className="text-xl font-medium mb-2">Dashboards & Visualization</h3>
-          <p className="text-muted-foreground text-sm mb-4">
-            Real-time dashboards with mapping, KPIs, and automated reporting — built for decision-makers.
-          </p>
-          <ul className="space-y-2 text-sm">
-            <li className="flex items-start gap-2">
-              <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-              <span>Interactive dashboards with spatial analytics</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-              <span>Automated workflows for reporting and alerts</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-              <span>Modular design tailored to operational needs</span>
-            </li>
-          </ul>
-        </CardContent>
-      </Card>
-
-      <Card className="bg-card/50 border border-border/40 rounded-lg overflow-hidden hover:border-primary/50 transition-colors">
-        <CardContent className="p-6">
-          <div className="h-10 w-10 rounded-md bg-primary/10 flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
+          ),
+          description: "Real-time dashboards with mapping, KPIs, and automated reporting — built for decision-makers.",
+          bullets: [
+            "Interactive dashboards with spatial analytics",
+            "Automated workflows for reporting and alerts",
+            "Modular design tailored to operational needs",
+          ],
+        },
+        {
+          title: "Custom Infrastructure",
+          icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+              className="text-primary">
               <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
               <circle cx="12" cy="12" r="3" />
             </svg>
-          </div>
-          <h3 className="text-xl font-medium mb-2">Custom Infrastructure</h3>
-          <p className="text-muted-foreground text-sm mb-4">
-            Secure, privacy-first systems built on open standards. Fully auditable and aligned with your stack.
-          </p>
-          <ul className="space-y-2 text-sm">
-            <li className="flex items-start gap-2">
-              <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-              <span>Zero-license, open-source deployments</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-              <span>Custom APIs, database, and pipeline design</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-              <span>Integrations with your existing tools and workflows</span>
-            </li>
-          </ul>
-        </CardContent>
-      </Card>
+          ),
+          description: "Secure, privacy-first systems built on open standards. Fully auditable and aligned with your stack.",
+          bullets: [
+            "Zero-license, open-source deployments",
+            "Custom APIs, database, and pipeline design",
+            "Integrations with your existing tools and workflows",
+          ],
+        },
+      ].map((solution, i) => (
+        <Card key={i} className="bg-card/60 border border-border/40 rounded-xl shadow-sm hover:shadow-md hover:border-primary/60 transition-all duration-200">
+          <CardContent className="p-6">
+            <div className="h-10 w-10 rounded-md bg-primary/10 flex items-center justify-center mb-4">
+              {solution.icon}
+            </div>
+            <h3 className="text-lg font-semibold text-foreground mb-2">{solution.title}</h3>
+            <p className="text-sm text-muted-foreground mb-4">{solution.description}</p>
+            <ul className="space-y-2 text-sm">
+              {solution.bullets.map((point, j) => (
+                <li key={j} className="flex items-start gap-2">
+                  <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
+      ))}
     </div>
   </div>
 </section>
 
 {/*  Approach Section */}
-<section id="approach" className="py-24 border-t border-border/40">
+<section id="approach" className="py-28 border-t border-border/40 bg-background">
   <div className="container">
-    <div className="max-w-xl">
-      <h2 className="text-3xl font-light tracking-tight">Our Process</h2>
-      <p className="mt-4 text-muted-foreground">
+    <div className="max-w-2xl mx-auto text-center">
+      <h2 className="text-4xl font-semibold tracking-tight text-foreground">Our Process</h2>
+      <p className="mt-4 text-lg text-muted-foreground">
         From messy data to decision-ready insights — our workflow blends automation, precision, and purpose.
       </p>
     </div>
 
-    <div className="mt-16 relative">
-      <div className="absolute left-[26px] top-0 bottom-0 w-px bg-border/40 md:left-1/2 md:-ml-px"></div>
-      <div className="space-y-16">
+    <div className="mt-20">
+      <div className="hidden md:flex justify-between items-start relative">
+        {/* Connecting line */}
+        <div className="absolute top-6 left-0 right-0 h-px bg-border/40 z-0" />
 
-        {/* Step 01 - Collect */}
-        <div className="relative">
-          <div className="flex items-start gap-8 md:gap-0 md:items-center">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-border/40 bg-card z-10">
-              <span className="text-sm font-medium">01</span>
+        {[
+          {
+            step: "01",
+            title: "Collect",
+            description:
+              "We extract structured and unstructured data from the web, APIs, documents, and media in over 20 languages.",
+          },
+          {
+            step: "02",
+            title: "Extract",
+            description:
+              "Using domain-specific AI, we enrich raw data with metadata, predictive tags, and risk scores.",
+          },
+          {
+            step: "03",
+            title: "Visualize",
+            description:
+              "We turn data into dashboards, spatial layers, and real-time KPIs — all designed for decision-making.",
+          },
+          {
+            step: "04",
+            title: "Build",
+            description:
+              "We deploy scalable, open-source solutions aligned with your infrastructure — secure, flexible, and future-proof.",
+          },
+        ].map((item, i) => (
+          <div key={i} className="relative w-1/4 text-center px-4 z-10">
+            <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full border border-border bg-card text-sm font-medium">
+              {item.step}
             </div>
-            <div className="md:w-1/2 md:pr-12 md:text-right">
-              <h3 className="text-xl font-medium">Collect</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                We extract structured and unstructured data from the web, APIs, databases, documents, and media in over 20 languages.
-              </p>
-            </div>
-            <div className="hidden md:block md:w-1/2 md:pl-12"></div>
+            <h3 className="text-base font-semibold text-foreground">{item.title}</h3>
+            <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{item.description}</p>
           </div>
-        </div>
+        ))}
+      </div>
 
-        {/* Step 02 - Extract */}
-        <div className="relative">
-          <div className="flex items-start gap-8 md:gap-0 md:items-center">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-border/40 bg-card z-10">
-              <span className="text-sm font-medium">02</span>
+      {/* Mobile layout: vertical stack */}
+      <div className="space-y-12 md:hidden mt-12">
+        {[
+          {
+            step: "01",
+            title: "Collect",
+            description:
+              "We extract structured and unstructured data from the web, APIs, documents, and media in over 20 languages.",
+          },
+          {
+            step: "02",
+            title: "Extract",
+            description:
+              "Using domain-specific AI, we enrich raw data with metadata, predictive tags, and risk scores.",
+          },
+          {
+            step: "03",
+            title: "Visualize",
+            description:
+              "We turn data into dashboards, spatial layers, and real-time KPIs — all designed for decision-making.",
+          },
+          {
+            step: "04",
+            title: "Build",
+            description:
+              "We deploy scalable, open-source solutions aligned with your infrastructure — secure, flexible, and future-proof.",
+          },
+        ].map((item, i) => (
+          <div key={i} className="text-left">
+            <div className="flex items-center gap-4">
+              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-border bg-card text-sm font-medium">
+                {item.step}
+              </div>
+              <h3 className="text-base font-semibold text-foreground">{item.title}</h3>
             </div>
-            <div className="md:w-1/2 md:pr-12 md:text-right md:order-1 md:hidden">
-              <h3 className="text-xl font-medium">Extract</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Using domain-specific AI, we enrich raw data with metadata, predictive tags, and risk scores.
-              </p>
-            </div>
-            <div className="hidden md:block md:w-1/2 md:pr-12 md:text-right"></div>
-            <div className="hidden md:block md:w-1/2 md:pl-12">
-              <h3 className="text-xl font-medium">Extract</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Using domain-specific AI, we enrich raw data with metadata, predictive tags, and risk scores.
-              </p>
-            </div>
+            <p className="mt-2 ml-14 text-sm text-muted-foreground leading-relaxed">{item.description}</p>
           </div>
-        </div>
-
-        {/* Step 03 - Visualize */}
-        <div className="relative">
-          <div className="flex items-start gap-8 md:gap-0 md:items-center">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-border/40 bg-card z-10">
-              <span className="text-sm font-medium">03</span>
-            </div>
-            <div className="md:w-1/2 md:pr-12 md:text-right">
-              <h3 className="text-xl font-medium">Visualize</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                We turn data into dashboards, spatial layers, and real-time KPIs — all designed for decision-making.
-              </p>
-            </div>
-            <div className="hidden md:block md:w-1/2 md:pl-12"></div>
-          </div>
-        </div>
-
-        {/* Step 04 - Build */}
-        <div className="relative">
-          <div className="flex items-start gap-8 md:gap-0 md:items-center">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-border/40 bg-card z-10">
-              <span className="text-sm font-medium">04</span>
-            </div>
-            <div className="md:w-1/2 md:pr-12 md:text-right md:order-1 md:hidden">
-              <h3 className="text-xl font-medium">Build</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                We deploy scalable, open-source solutions aligned with your infrastructure — secure, flexible, and future-proof.
-              </p>
-            </div>
-            <div className="hidden md:block md:w-1/2 md:pr-12 md:text-right"></div>
-            <div className="hidden md:block md:w-1/2 md:pl-12">
-              <h3 className="text-xl font-medium">Build</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                We deploy scalable, open-source solutions aligned with your infrastructure — secure, flexible, and future-proof.
-              </p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   </div>
 </section>
+
        
 
         {/* Case Studies Section */}
-        <section id="case-studies" className="py-24 border-t border-border/40">
-          <div className="container">
-            <div className="max-w-xl">
-              <h2 className="text-3xl font-light tracking-tight">Case Studies</h2>
-              <p className="mt-4 text-muted-foreground">
-                Real-world examples of how our AI solutions have transformed businesses.
+        <section id="case-studies" className="py-28 border-t border-border/40 bg-background">
+  <div className="container">
+    <div className="max-w-2xl mx-auto text-center">
+      <h2 className="text-4xl font-semibold tracking-tight text-foreground">Case Studies</h2>
+      <p className="mt-4 text-lg text-muted-foreground">
+        From retrieval systems to real-time dashboards and global sanctions infrastructure — our tools turn complexity into clarity.
+      </p>
+    </div>
+
+    <div className="mt-20">
+      <Tabs defaultValue="ai" className="w-full">
+        <TabsList className="w-full max-w-md grid grid-cols-3 h-10 p-1 bg-muted/20 rounded-md mx-auto">
+          <TabsTrigger value="ai" className="rounded-sm text-xs">AI & Data Systems</TabsTrigger>
+          <TabsTrigger value="dashboards" className="rounded-sm text-xs">Dashboards & Visualization</TabsTrigger>
+          <TabsTrigger value="infra" className="rounded-sm text-xs">Custom Infrastructure</TabsTrigger>
+        </TabsList>
+
+        {/* RAG SYSTEM */}
+        <TabsContent value="ai" className="mt-12">
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-2xl font-light tracking-tight"> RAG System</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                A document intelligence system for policy analysts navigating 15TB of reports across multilateral banks.
               </p>
+
+              <div className="mt-8 space-y-6">
+                <div>
+                  <h4 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">Challenge</h4>
+                  <p className="mt-2 text-sm">
+                    Analysts struggled to find relevant language in thousands of dense policy documents. Manual search was slow and inconsistent.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">Solution</h4>
+                  <p className="mt-2 text-sm">
+                    We built a RAG (Retrieval-Augmented Generation) pipeline using Sentence Transformers, Haystack, and Gemini Pro — enabling filtered QA over massive multilingual corpora.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">Results</h4>
+                  <ul className="mt-2 space-y-2 text-sm">
+                    <li className="flex items-center gap-2"><div className="h-1.5 w-1.5 rounded-full bg-primary"></div>Cut research time by 90%</li>
+                    <li className="flex items-center gap-2"><div className="h-1.5 w-1.5 rounded-full bg-primary"></div>Improved document coverage and traceability</li>
+                    <li className="flex items-center gap-2"><div className="h-1.5 w-1.5 rounded-full bg-primary"></div>Deployed securely via Streamlit with metadata filters</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="mt-8 p-4 border border-border/40 rounded-md bg-card/30">
+                <p className="text-sm italic">"This RAG system completely transformed how we interact with complex policy data."</p>
+                <p className="mt-2 text-xs text-muted-foreground">— Policy analyst</p>
+              </div>
             </div>
 
-            <div className="mt-16">
-              <Tabs defaultValue="finance" className="w-full">
-                <TabsList className="w-full max-w-md grid grid-cols-3 h-10 p-1 bg-muted/20 rounded-md">
-                  <TabsTrigger value="finance" className="rounded-sm text-xs">
-                    Finance
-                  </TabsTrigger>
-                  <TabsTrigger value="healthcare" className="rounded-sm text-xs">
-                    Healthcare
-                  </TabsTrigger>
-                  <TabsTrigger value="retail" className="rounded-sm text-xs">
-                    Retail
-                  </TabsTrigger>
-                </TabsList>
-
-                <TabsContent value="finance" className="mt-8">
-                  <div className="grid md:grid-cols-2 gap-12">
-                    <div>
-                      <h3 className="text-2xl font-light tracking-tight">Global Investment Firm</h3>
-                      <p className="mt-2 text-sm text-muted-foreground">
-                        A leading investment firm needed to analyze market trends faster to make better investment
-                        decisions.
-                      </p>
-
-                      <div className="mt-8 space-y-6">
-                        <div>
-                          <h4 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
-                            Challenge
-                          </h4>
-                          <p className="mt-2 text-sm">
-                            Analysts were spending 20+ hours per week manually processing financial reports and market
-                            data, causing delays in decision-making.
-                          </p>
-                        </div>
-
-                        <div>
-                          <h4 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
-                            Solution
-                          </h4>
-                          <p className="mt-2 text-sm">
-                            We developed a custom AI solution that automatically extracts, analyzes, and visualizes key
-                            financial metrics from various sources in real-time.
-                          </p>
-                        </div>
-
-                        <div>
-                          <h4 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
-                            Results
-                          </h4>
-                          <ul className="mt-2 space-y-2 text-sm">
-                            <li className="flex items-center gap-2">
-                              <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
-                              <span>85% reduction in data processing time</span>
-                            </li>
-                            <li className="flex items-center gap-2">
-                              <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
-                              <span>32% improvement in investment performance</span>
-                            </li>
-                            <li className="flex items-center gap-2">
-                              <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
-                              <span>$4.2M additional annual revenue</span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-
-                      <div className="mt-8 p-4 border border-border/40 rounded-md bg-card/30">
-                        <p className="text-sm italic">
-                          "Dash-Dev transformed our investment process. Their AI solution has given us a significant
-                          competitive advantage in the market."
-                        </p>
-                        <p className="mt-2 text-xs text-muted-foreground">
-                          — Sarah Johnson, CIO, Global Investments Ltd.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="relative aspect-[4/3] overflow-hidden rounded-md border border-border/40 bg-card/30">
-                      <Image
-                        src="/placeholder.svg?height=600&width=800"
-                        alt="Financial dashboard visualization"
-                        width={800}
-                        height={600}
-                        className="object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
-                      <div className="absolute bottom-0 left-0 right-0 p-4">
-                        <Button variant="outline" size="sm" className="h-8 text-xs gap-1.5 rounded-md">
-                          <span>View case study</span>
-                          <ExternalLink className="h-3.5 w-3.5" />
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                </TabsContent>
-
-                <TabsContent value="healthcare" className="mt-8">
-                  <div className="grid md:grid-cols-2 gap-12">
-                    <div>
-                      <h3 className="text-2xl font-light tracking-tight">National Hospital Network</h3>
-                      <p className="mt-2 text-sm text-muted-foreground">
-                        A hospital network needed to improve patient outcomes while reducing operational costs.
-                      </p>
-
-                      <div className="mt-8 space-y-6">
-                        <div>
-                          <h4 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
-                            Challenge
-                          </h4>
-                          <p className="mt-2 text-sm">
-                            Doctors were overwhelmed with patient data and struggled to identify high-risk patients
-                            quickly enough for preventive intervention.
-                          </p>
-                        </div>
-
-                        <div>
-                          <h4 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
-                            Solution
-                          </h4>
-                          <p className="mt-2 text-sm">
-                            We implemented an AI-powered predictive analytics platform with intuitive visualizations to
-                            identify at-risk patients and recommend personalized care plans.
-                          </p>
-                        </div>
-
-                        <div>
-                          <h4 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
-                            Results
-                          </h4>
-                          <ul className="mt-2 space-y-2 text-sm">
-                            <li className="flex items-center gap-2">
-                              <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
-                              <span>22% reduction in readmission rates</span>
-                            </li>
-                            <li className="flex items-center gap-2">
-                              <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
-                              <span>15% decrease in average length of stay</span>
-                            </li>
-                            <li className="flex items-center gap-2">
-                              <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
-                              <span>$3.8M annual cost savings</span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-
-                      <div className="mt-8 p-4 border border-border/40 rounded-md bg-card/30">
-                        <p className="text-sm italic">
-                          "The AI solution from Dash-Dev has revolutionized how we deliver care. We're now able to
-                          intervene earlier and provide better outcomes for our patients."
-                        </p>
-                        <p className="mt-2 text-xs text-muted-foreground">
-                          — Dr. Michael Chen, Chief Medical Officer, National Health
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="relative aspect-[4/3] overflow-hidden rounded-md border border-border/40 bg-card/30">
-                      <Image
-                        src="/placeholder.svg?height=600&width=800"
-                        alt="Healthcare analytics dashboard"
-                        width={800}
-                        height={600}
-                        className="object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
-                      <div className="absolute bottom-0 left-0 right-0 p-4">
-                        <Button variant="outline" size="sm" className="h-8 text-xs gap-1.5 rounded-md">
-                          <span>View case study</span>
-                          <ExternalLink className="h-3.5 w-3.5" />
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                </TabsContent>
-
-                <TabsContent value="retail" className="mt-8">
-                  <div className="grid md:grid-cols-2 gap-12">
-                    <div>
-                      <h3 className="text-2xl font-light tracking-tight">Multinational Retailer</h3>
-                      <p className="mt-2 text-sm text-muted-foreground">
-                        A global retail chain needed to optimize inventory management and personalize customer
-                        experiences.
-                      </p>
-
-                      <div className="mt-8 space-y-6">
-                        <div>
-                          <h4 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
-                            Challenge
-                          </h4>
-                          <p className="mt-2 text-sm">
-                            The retailer was struggling with excess inventory in some locations while experiencing
-                            stockouts in others, leading to lost sales and customer dissatisfaction.
-                          </p>
-                        </div>
-
-                        <div>
-                          <h4 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
-                            Solution
-                          </h4>
-                          <p className="mt-2 text-sm">
-                            We developed an AI-driven demand forecasting system with interactive visualizations for
-                            inventory management and a recommendation engine for personalized marketing.
-                          </p>
-                        </div>
-
-                        <div>
-                          <h4 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
-                            Results
-                          </h4>
-                          <ul className="mt-2 space-y-2 text-sm">
-                            <li className="flex items-center gap-2">
-                              <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
-                              <span>28% reduction in inventory costs</span>
-                            </li>
-                            <li className="flex items-center gap-2">
-                              <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
-                              <span>18% increase in sales conversion</span>
-                            </li>
-                            <li className="flex items-center gap-2">
-                              <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
-                              <span>42% improvement in customer satisfaction</span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-
-                      <div className="mt-8 p-4 border border-border/40 rounded-md bg-card/30">
-                        <p className="text-sm italic">
-                          "Dash-Dev's solution has transformed our retail operations. We've significantly reduced costs
-                          while improving the customer experience across all our stores."
-                        </p>
-                        <p className="mt-2 text-xs text-muted-foreground">
-                          — Robert Taylor, VP of Operations, Global Retail Inc.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="relative aspect-[4/3] overflow-hidden rounded-md border border-border/40 bg-card/30">
-                      <Image
-                        src="/placeholder.svg?height=600&width=800"
-                        alt="Retail analytics dashboard"
-                        width={800}
-                        height={600}
-                        className="object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
-                      <div className="absolute bottom-0 left-0 right-0 p-4">
-                        <Button variant="outline" size="sm" className="h-8 text-xs gap-1.5 rounded-md">
-                          <span>View case study</span>
-                          <ExternalLink className="h-3.5 w-3.5" />
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                </TabsContent>
-              </Tabs>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-md border border-border/40 bg-card/30">
+              <Image
+                src="/case-rag.png"
+                alt="World Bank RAG system"
+                width={800}
+                height={600}
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <Button variant="outline" size="sm" className="h-8 text-xs gap-1.5 rounded-md">
+                  <span>View case study</span>
+                  <ExternalLink className="h-3.5 w-3.5" />
+                </Button>
+              </div>
             </div>
           </div>
-        </section>
+        </TabsContent>
+
+        {/* MDB WATCHDOG */}
+        <TabsContent value="dashboards" className="mt-12">
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-2xl font-light tracking-tight">Development Tracker</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                A public dashboard tracking multilateral development bank projects across Pakistan with geospatial filters, visual summaries, and real-time data.
+              </p>
+
+              <div className="mt-8 space-y-6">
+                <div>
+                  <h4 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">Challenge</h4>
+                  <p className="mt-2 text-sm">
+                    Local organizations lacked access to clean, up-to-date information about foreign-funded infrastructure projects.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">Solution</h4>
+                  <p className="mt-2 text-sm">
+                    We developed MDB Watchdog — a full-stack platform with Supabase + PostGIS backend and Mapbox-powered frontend, enabling live mapping, project filtering, and leaderboard contributions.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">Results</h4>
+                  <ul className="mt-2 space-y-2 text-sm">
+                    <li className="flex items-center gap-2"><div className="h-1.5 w-1.5 rounded-full bg-primary"></div>Over 3000 development projects mapped</li>
+                    <li className="flex items-center gap-2"><div className="h-1.5 w-1.5 rounded-full bg-primary"></div>Used by researchers, journalists, and NGOs</li>
+                    <li className="flex items-center gap-2"><div className="h-1.5 w-1.5 rounded-full bg-primary"></div>Mobile-ready, with community contribution feature</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="mt-8 p-4 border border-border/40 rounded-md bg-card/30">
+                <p className="text-sm italic">"This dashboard makes foreign-funded development finally visible and accountable."</p>
+                <p className="mt-2 text-xs text-muted-foreground">— Open Data advocate, Islamabad</p>
+              </div>
+            </div>
+
+            <div className="relative aspect-[4/3] overflow-hidden rounded-md border border-border/40 bg-card/30">
+              <Image
+                src="/case-mdb.png"
+                alt="MDB Watchdog Dashboard"
+                width={800}
+                height={600}
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <Button variant="outline" size="sm" className="h-8 text-xs gap-1.5 rounded-md">
+                  <span>View case study</span>
+                  <ExternalLink className="h-3.5 w-3.5" />
+                </Button>
+              </div>
+            </div>
+          </div>
+        </TabsContent>
+
+        {/* SANCTIONS TRACKER */}
+        <TabsContent value="infra" className="mt-12">
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-2xl font-light tracking-tight">Sanctions Intelligence Tracker</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                A unified, automated pipeline for tracking international sanctions data from EU, UK, and UN sources.
+              </p>
+
+              <div className="mt-8 space-y-6">
+                <div>
+                  <h4 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">Challenge</h4>
+                  <p className="mt-2 text-sm">
+                    Sanctions data is fragmented across jurisdictions and formats. Tracking designations and updates is time-consuming.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">Solution</h4>
+                  <p className="mt-2 text-sm">
+                    We engineered a Python-based system using Scrapy + Zyte + Supabase to fetch, normalize, and merge updates across multiple sources — complete with UUID-based matching and geospatial enrichment.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">Results</h4>
+                  <ul className="mt-2 space-y-2 text-sm">
+                    <li className="flex items-center gap-2"><div className="h-1.5 w-1.5 rounded-full bg-primary"></div>Daily updated dataset with 10k+ records</li>
+                    <li className="flex items-center gap-2"><div className="h-1.5 w-1.5 rounded-full bg-primary"></div>Integrated into global compliance workflows</li>
+                    <li className="flex items-center gap-2"><div className="h-1.5 w-1.5 rounded-full bg-primary"></div>Trackable by source, ID, and geolocation</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="mt-8 p-4 border border-border/40 rounded-md bg-card/30">
+                <p className="text-sm italic">"Finally, a sanctions tracker that's automated, reliable, and actually usable."</p>
+                <p className="mt-2 text-xs text-muted-foreground">— Risk analyst, global compliance firm</p>
+              </div>
+            </div>
+
+            <div className="relative aspect-[4/3] overflow-hidden rounded-md border border-border/40 bg-card/30">
+              <Image
+                src="/case-sanctions.png"
+                alt="Sanctions data pipeline"
+                width={800}
+                height={600}
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <Button variant="outline" size="sm" className="h-8 text-xs gap-1.5 rounded-md">
+                  <span>View case study</span>
+                  <ExternalLink className="h-3.5 w-3.5" />
+                </Button>
+              </div>
+            </div>
+          </div>
+        </TabsContent>
+      </Tabs>
+    </div>
+  </div>
+</section>
+      
 
         {/* Testimonials Section */}
         <section id="testimonials" className="py-24 border-t border-border/40">
