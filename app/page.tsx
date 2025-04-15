@@ -216,8 +216,7 @@ export default function Home() {
       <div className="lg:col-span-5">
         <h2 className="text-4xl font-semibold tracking-tight text-foreground">About Dash-Dev</h2>
         <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-          We’re a cross-functional team of AI engineers, legal analysts, GIS experts, and computational designers. We build smart pipelines and scalable platforms using generative AI, multilingual text mining, and predictive spatial analytics — turning complexity into clarity.
-        </p>
+        We’re a Brooklyn-based, full-stack team of engineers, developers, analysts, researchers, and designers building tailored data and AI solutions for clients across the US, Europe, China, and MENA.        </p>
       </div>
 
       {/* Right: Feature Cards */}
