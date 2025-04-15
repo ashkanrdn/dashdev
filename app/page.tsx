@@ -615,7 +615,7 @@ export default function Home() {
                 <div>
                   <h4 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">Results</h4>
                   <ul className="mt-2 space-y-2 text-sm">
-                    <li className="flex items-center gap-2"><div className="h-1.5 w-1.5 rounded-full bg-primary"></div>Daily updated dataset with 10k+ records</li>
+                    <li className="flex items-center gap-2"><div className="h-1.5 w-1.5 rounded-full bg-primary"></div>Daily updated dataset with 100k+ records</li>
                     <li className="flex items-center gap-2"><div className="h-1.5 w-1.5 rounded-full bg-primary"></div>Integrated into global compliance workflows</li>
                     <li className="flex items-center gap-2"><div className="h-1.5 w-1.5 rounded-full bg-primary"></div>Trackable by source, ID, and geolocation</li>
                   </ul>
@@ -653,7 +653,7 @@ export default function Home() {
       
 
         {/* Testimonials Section */}
-        <section id="testimonials" className="py-24 border-t border-border/40">
+        {/* <section id="testimonials" className="py-24 border-t border-border/40">
           <div className="container">
             <div className="max-w-xl">
               <h2 className="text-3xl font-light tracking-tight">What Our Clients Say</h2>
@@ -721,7 +721,7 @@ export default function Home() {
               </Card>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* CTA Section */}
         <section className="py-24 border-t border-border/40">
