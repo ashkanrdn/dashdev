@@ -209,327 +209,263 @@ export default function Home() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-24 border-t border-border/40">
-          <div className="container">
-            <div className="max-w-xl">
-              <h2 className="text-3xl font-light tracking-tight">About Dash-Dev</h2>
-              <p className="mt-4 text-muted-foreground">
-              We are a team of AI engineers, lawyers, GIS experts, and computational designers specializing in generative AI models, real-time text mining, and predictive geospatial analytics and risks assesments. Together, we build full-stack dashboards, customized enterprise solutions, and automated data pipelines that extract, analyze, and visualize. We help you make sense of your data.
-              </p>
-            </div>
+        <section id="about" className="py-28 border-t border-border/40 bg-background">
+  <div className="container max-w-screen-xl">
+    <div className="grid lg:grid-cols-12 gap-16">
+      {/* Left: About Text */}
+      <div className="lg:col-span-5 flex flex-col justify-center">
+        <h2 className="text-4xl font-semibold tracking-tight text-foreground">About Dash-Dev</h2>
+        <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+          We’re a cross-functional team of AI engineers, legal analysts, GIS experts, and computational designers. We build smart pipelines and scalable platforms using generative AI, multilingual text mining, and predictive spatial analytics — turning complexity into clarity.
+        </p>
+      </div>
 
-            <div className="mt-16 grid gap-8 md:grid-cols-2">
-              <div>
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div className="p-6 border border-border/40 rounded-md bg-card/30 hover:border-primary/30 transition-colors">
-                    <h3 className="text-xl font-light"> Data Harvesting and Augmentation</h3>
-                    <p className="mt-2 text-sm text-muted-foreground">Web, PDFs, databases, and multilingual text and videos (20+ languages)</p>
-                  </div>
-
-                  <div className="p-6 border border-border/40 rounded-md bg-card/30 hover:border-primary/30 transition-colors">
-                    <h3 className="text-xl font-light"> Domain-Specific AI Models</h3>
-                    <p className="mt-2 text-sm text-muted-foreground">Legal | Geospatial | Finance | Built Environment </p>
-                  </div>
-
-                  <div className="p-6 border border-border/40 rounded-md bg-card/30 hover:border-primary/30 transition-colors">
-                    <h3 className="text-xl font-light">Dashboards </h3>
-                    <p className="mt-2 text-sm text-muted-foreground">Modular dashboards with real-time KPIs, predictive mapping, and automated reporting</p>
-                  </div>
-
-                  <div className="p-6 border border-border/40 rounded-md bg-card/30 hover:border-primary/30 transition-colors">
-                    <h3 className="text-xl font-light">Open-Source & Privacy-First</h3>
-                    <p className="mt-2 text-sm text-muted-foreground">Systems built on Privacy and Open source — auditable code, secure and zero licensing fees</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="p-6 border border-border/40 rounded-md bg-card/30">
-                <h3 className="text-xl font-light mb-6">Our process</h3>
-                <ul className="space-y-6">
-                  <li className="space-y-1">
-                    <div className="flex items-center gap-2">
-                      <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
-                      <p className="font-medium text-sm">Collect</p>
-                    </div>
-                    <p className="text-sm text-muted-foreground pl-4">
-                    Data collection and aggregation from web, APIs, proprietary data, documents – structured or unstructured
-                    </p>
-                  </li>
-
-                  <li className="space-y-1">
-                    <div className="flex items-center gap-2">
-                      <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
-                      <p className="font-medium text-sm">Extract</p>
-                    </div>
-                    <p className="text-sm text-muted-foreground pl-4">
-                    Enrich your data with metadata, risk scores, and predictive tags using domain-specific AI
-                    </p>
-                  </li>
-
-                  <li className="space-y-1">
-                    <div className="flex items-center gap-2">
-                      <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
-                      <p className="font-medium text-sm">Visualize</p>
-                    </div>
-                    <p className="text-sm text-muted-foreground pl-4">
-                    Decision-ready dashboards: map insights to KPIs and generate reports in one click   </p>           </li>
-
-                  <li className="space-y-1">
-                    <div className="flex items-center gap-2">
-                      <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
-                      <p className="font-medium text-sm">Build</p>
-                    </div>
-                    <p className="text-sm text-muted-foreground pl-4">
-                    Custom and open-source solutions engineered for your workflows                   </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
+      {/* Right: Feature Cards */}
+      <div className="lg:col-span-7 grid sm:grid-cols-2 gap-6">
+        {[
+          {
+            title: "Data Harvesting & Augmentation",
+            text: "Extract structured and unstructured data from websites, PDFs, APIs, and multilingual sources across 20+ languages.",
+          },
+          {
+            title: "Domain-Specific AI",
+            text: "Tailored AI systems for law, finance, geopolitics, and infrastructure — focused on classification, prediction, and risk signals.",
+          },
+          {
+            title: "Dashboards & Mapping",
+            text: "Real-time platforms with live KPIs, spatial layers, and one-click reporting. Designed for speed, clarity, and impact.",
+          },
+          {
+            title: "Open & Secure Infrastructure",
+            text: "Open-source, privacy-first architecture. Seamless APIs. Zero license fees. Built for interoperability and auditability.",
+          },
+        ].map((item, index) => (
+          <motion.div
+            key={index}
+            whileHover={{ y: -2 }}
+            transition={{ duration: 0.2 }}
+            className="group p-6 rounded-xl border border-border bg-card hover:shadow-lg transition-all duration-200 flex flex-col justify-between"
+          >
+            <h3 className="text-base font-semibold text-white mb-2 group-hover:text-primary">{item.title}</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+     
 
         {/* Clients Section */}
-        <section className="py-16 border-t border-border/40">
-          <div className="container">
-            <p className="text-sm text-muted-foreground mb-8">Trusted by innovative companies</p>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
-                <div key={i} className="grayscale opacity-50 hover:opacity-80 transition-opacity">
-                  <div className="h-8 bg-muted/30 rounded-md"></div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <section className="py-24 border-t border-border/40 bg-background">
+  <div className="container">
+    <div className="max-w-4xl mx-auto text-center">
+      <motion.blockquote
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="text-2xl md:text-3xl font-light leading-relaxed italic text-foreground"
+      >
+        “We build systems that turn messy, multilingual data into clear, actionable insight ”
+      </motion.blockquote>
+    </div>
+  </div>
+</section>       
 
         {/* Solutions Section */}
-        <section id="solutions" className="py-24 border-t border-border/40">
-          <div className="container">
-            <div className="max-w-xl">
-              <h2 className="text-3xl font-light tracking-tight">Our Solutions</h2>
-              <p className="mt-4 text-muted-foreground">
-                We deliver end-to-end AI solutions that solve real business problems and create measurable value.
+<section id="solutions" className="py-24 border-t border-border/40">
+  <div className="container">
+    <div className="max-w-xl">
+      <h2 className="text-3xl font-light tracking-tight">Our Work</h2>
+      <p className="mt-4 text-muted-foreground">
+        We build smart, secure, and open tools to extract, analyze, and visualize complex data — from text and documents to geospatial layers and predictive models.
+      </p>
+    </div>
+
+    <div className="mt-16 grid gap-6 md:grid-cols-3">
+      <Card className="bg-card/50 border border-border/40 rounded-lg overflow-hidden hover:border-primary/50 transition-colors">
+        <CardContent className="p-6">
+          <div className="h-10 w-10 rounded-md bg-primary/10 flex items-center justify-center mb-4">
+            <Brain className="h-5 w-5 text-primary" />
+          </div>
+          <h3 className="text-xl font-medium mb-2">AI & Data Systems</h3>
+          <p className="text-muted-foreground text-sm mb-4">
+            Domain-specific AI to process multilingual text, legal data, spatial information, and unstructured sources.
+          </p>
+          <ul className="space-y-2 text-sm">
+            <li className="flex items-start gap-2">
+              <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+              <span>Custom LLMs for legal, geospatial, and financial data</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+              <span>Text mining across sources and in 20+ languages</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+              <span>Risk tagging and predictive scoring</span>
+            </li>
+          </ul>
+        </CardContent>
+      </Card>
+
+      <Card className="bg-card/50 border border-border/40 rounded-lg overflow-hidden hover:border-primary/50 transition-colors">
+        <CardContent className="p-6">
+          <div className="h-10 w-10 rounded-md bg-primary/10 flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M3 9h18" />
+              <path d="M9 21V9" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-medium mb-2">Dashboards & Visualization</h3>
+          <p className="text-muted-foreground text-sm mb-4">
+            Real-time dashboards with mapping, KPIs, and automated reporting — built for decision-makers.
+          </p>
+          <ul className="space-y-2 text-sm">
+            <li className="flex items-start gap-2">
+              <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+              <span>Interactive dashboards with spatial analytics</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+              <span>Automated workflows for reporting and alerts</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+              <span>Modular design tailored to operational needs</span>
+            </li>
+          </ul>
+        </CardContent>
+      </Card>
+
+      <Card className="bg-card/50 border border-border/40 rounded-lg overflow-hidden hover:border-primary/50 transition-colors">
+        <CardContent className="p-6">
+          <div className="h-10 w-10 rounded-md bg-primary/10 flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
+              <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-medium mb-2">Custom Infrastructure</h3>
+          <p className="text-muted-foreground text-sm mb-4">
+            Secure, privacy-first systems built on open standards. Fully auditable and aligned with your stack.
+          </p>
+          <ul className="space-y-2 text-sm">
+            <li className="flex items-start gap-2">
+              <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+              <span>Zero-license, open-source deployments</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+              <span>Custom APIs, database, and pipeline design</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+              <span>Integrations with your existing tools and workflows</span>
+            </li>
+          </ul>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</section>
+
+{/*  Approach Section */}
+<section id="approach" className="py-24 border-t border-border/40">
+  <div className="container">
+    <div className="max-w-xl">
+      <h2 className="text-3xl font-light tracking-tight">Our Process</h2>
+      <p className="mt-4 text-muted-foreground">
+        From messy data to decision-ready insights — our workflow blends automation, precision, and purpose.
+      </p>
+    </div>
+
+    <div className="mt-16 relative">
+      <div className="absolute left-[26px] top-0 bottom-0 w-px bg-border/40 md:left-1/2 md:-ml-px"></div>
+      <div className="space-y-16">
+
+        {/* Step 01 - Collect */}
+        <div className="relative">
+          <div className="flex items-start gap-8 md:gap-0 md:items-center">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-border/40 bg-card z-10">
+              <span className="text-sm font-medium">01</span>
+            </div>
+            <div className="md:w-1/2 md:pr-12 md:text-right">
+              <h3 className="text-xl font-medium">Collect</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                We extract structured and unstructured data from the web, APIs, databases, documents, and media in over 20 languages.
               </p>
             </div>
-
-            <div className="mt-16 grid gap-6 md:grid-cols-3">
-              <Card className="bg-card/50 border border-border/40 rounded-lg overflow-hidden hover:border-primary/50 transition-colors">
-                <CardContent className="p-6">
-                  <div className="h-10 w-10 rounded-md bg-primary/10 flex items-center justify-center mb-4">
-                    <Brain className="h-5 w-5 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-medium mb-2">Generative AI Consulting</h3>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    Harness the power of generative AI to automate processes and create new business opportunities.
-                  </p>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-start gap-2">
-                      <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                      <span>Custom AI application development</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                      <span>AI-powered chatbots and assistants</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                      <span>LLM fine-tuning and implementation</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                      <span>AI integration with existing systems</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-card/50 border border-border/40 rounded-lg overflow-hidden hover:border-primary/50 transition-colors">
-                <CardContent className="p-6">
-                  <div className="h-10 w-10 rounded-md bg-primary/10 flex items-center justify-center mb-4">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-primary"
-                    >
-                      <rect x="3" y="3" width="18" height="18" rx="2" />
-                      <path d="M3 9h18" />
-                      <path d="M9 21V9" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-medium mb-2">Data Visualization</h3>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    Transform complex data into clear, actionable insights through powerful visual storytelling.
-                  </p>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-start gap-2">
-                      <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                      <span>Interactive business dashboards</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                      <span>Data-driven storytelling narratives</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                      <span>Real-time analytics visualization</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                      <span>Custom visualization frameworks</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-card/50 border border-border/40 rounded-lg overflow-hidden hover:border-primary/50 transition-colors">
-                <CardContent className="p-6">
-                  <div className="h-10 w-10 rounded-md bg-primary/10 flex items-center justify-center mb-4">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-primary"
-                    >
-                      <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
-                      <circle cx="12" cy="12" r="3" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-medium mb-2">AI Strategy Development</h3>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    Create a comprehensive roadmap for implementing AI solutions across your organization.
-                  </p>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-start gap-2">
-                      <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                      <span>AI roadmap creation</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                      <span>Use case identification and prioritization</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                      <span>Technology stack recommendations</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ChevronRight className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                      <span>Implementation planning and execution</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
+            <div className="hidden md:block md:w-1/2 md:pl-12"></div>
           </div>
-        </section>
+        </div>
 
-        {/* Approach Section */}
-        <section id="approach" className="py-24 border-t border-border/40">
-          <div className="container">
-            <div className="max-w-xl">
-              <h2 className="text-3xl font-light tracking-tight">Our Approach</h2>
-              <p className="mt-4 text-muted-foreground">
-                A systematic methodology that delivers consistent results and maximizes ROI.
+        {/* Step 02 - Extract */}
+        <div className="relative">
+          <div className="flex items-start gap-8 md:gap-0 md:items-center">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-border/40 bg-card z-10">
+              <span className="text-sm font-medium">02</span>
+            </div>
+            <div className="md:w-1/2 md:pr-12 md:text-right md:order-1 md:hidden">
+              <h3 className="text-xl font-medium">Extract</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Using domain-specific AI, we enrich raw data with metadata, predictive tags, and risk scores.
               </p>
             </div>
-
-            <div className="mt-16 relative">
-              <div className="absolute left-[26px] top-0 bottom-0 w-px bg-border/40 md:left-1/2 md:-ml-px"></div>
-
-              <div className="space-y-16">
-                <div className="relative">
-                  <div className="flex items-start gap-8 md:gap-0 md:items-center">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-border/40 bg-card z-10">
-                      <span className="text-sm font-medium">01</span>
-                    </div>
-                    <div className="md:w-1/2 md:pr-12 md:text-right">
-                      <h3 className="text-xl font-medium">Discovery</h3>
-                      <p className="mt-2 text-sm text-muted-foreground">
-                        We begin with a comprehensive assessment of your business needs, challenges, and objectives
-                        through stakeholder interviews and data analysis.
-                      </p>
-                    </div>
-                    <div className="hidden md:block md:w-1/2 md:pl-12"></div>
-                  </div>
-                </div>
-
-                <div className="relative">
-                  <div className="flex items-start gap-8 md:gap-0 md:items-center">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-border/40 bg-card z-10">
-                      <span className="text-sm font-medium">02</span>
-                    </div>
-                    <div className="md:w-1/2 md:pr-12 md:text-right md:order-1 md:hidden">
-                      <h3 className="text-xl font-medium">Strategy</h3>
-                      <p className="mt-2 text-sm text-muted-foreground">
-                        We develop a tailored AI and data visualization strategy aligned with your business goals,
-                        including technology selection and implementation roadmap.
-                      </p>
-                    </div>
-                    <div className="hidden md:block md:w-1/2 md:pr-12 md:text-right"></div>
-                    <div className="hidden md:block md:w-1/2 md:pl-12">
-                      <h3 className="text-xl font-medium">Strategy</h3>
-                      <p className="mt-2 text-sm text-muted-foreground">
-                        We develop a tailored AI and data visualization strategy aligned with your business goals,
-                        including technology selection and implementation roadmap.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="relative">
-                  <div className="flex items-start gap-8 md:gap-0 md:items-center">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-border/40 bg-card z-10">
-                      <span className="text-sm font-medium">03</span>
-                    </div>
-                    <div className="md:w-1/2 md:pr-12 md:text-right">
-                      <h3 className="text-xl font-medium">Implementation</h3>
-                      <p className="mt-2 text-sm text-muted-foreground">
-                        Our team of experts builds and deploys custom AI solutions and data visualizations, ensuring
-                        seamless integration with your existing systems.
-                      </p>
-                    </div>
-                    <div className="hidden md:block md:w-1/2 md:pl-12"></div>
-                  </div>
-                </div>
-
-                <div className="relative">
-                  <div className="flex items-start gap-8 md:gap-0 md:items-center">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-border/40 bg-card z-10">
-                      <span className="text-sm font-medium">04</span>
-                    </div>
-                    <div className="md:w-1/2 md:pr-12 md:text-right md:order-1 md:hidden">
-                      <h3 className="text-xl font-medium">Optimization</h3>
-                      <p className="mt-2 text-sm text-muted-foreground">
-                        We continuously monitor and refine your AI solutions based on performance data and feedback,
-                        ensuring maximum ROI and business impact.
-                      </p>
-                    </div>
-                    <div className="hidden md:block md:w-1/2 md:pr-12 md:text-right"></div>
-                    <div className="hidden md:block md:w-1/2 md:pl-12">
-                      <h3 className="text-xl font-medium">Optimization</h3>
-                      <p className="mt-2 text-sm text-muted-foreground">
-                        We continuously monitor and refine your AI solutions based on performance data and feedback,
-                        ensuring maximum ROI and business impact.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="hidden md:block md:w-1/2 md:pr-12 md:text-right"></div>
+            <div className="hidden md:block md:w-1/2 md:pl-12">
+              <h3 className="text-xl font-medium">Extract</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Using domain-specific AI, we enrich raw data with metadata, predictive tags, and risk scores.
+              </p>
             </div>
           </div>
-        </section>
+        </div>
+
+        {/* Step 03 - Visualize */}
+        <div className="relative">
+          <div className="flex items-start gap-8 md:gap-0 md:items-center">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-border/40 bg-card z-10">
+              <span className="text-sm font-medium">03</span>
+            </div>
+            <div className="md:w-1/2 md:pr-12 md:text-right">
+              <h3 className="text-xl font-medium">Visualize</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                We turn data into dashboards, spatial layers, and real-time KPIs — all designed for decision-making.
+              </p>
+            </div>
+            <div className="hidden md:block md:w-1/2 md:pl-12"></div>
+          </div>
+        </div>
+
+        {/* Step 04 - Build */}
+        <div className="relative">
+          <div className="flex items-start gap-8 md:gap-0 md:items-center">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-border/40 bg-card z-10">
+              <span className="text-sm font-medium">04</span>
+            </div>
+            <div className="md:w-1/2 md:pr-12 md:text-right md:order-1 md:hidden">
+              <h3 className="text-xl font-medium">Build</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                We deploy scalable, open-source solutions aligned with your infrastructure — secure, flexible, and future-proof.
+              </p>
+            </div>
+            <div className="hidden md:block md:w-1/2 md:pr-12 md:text-right"></div>
+            <div className="hidden md:block md:w-1/2 md:pl-12">
+              <h3 className="text-xl font-medium">Build</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                We deploy scalable, open-source solutions aligned with your infrastructure — secure, flexible, and future-proof.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+       
 
         {/* Case Studies Section */}
         <section id="case-studies" className="py-24 border-t border-border/40">
