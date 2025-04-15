@@ -468,11 +468,28 @@ export default function Home() {
 
     <div className="mt-20">
       <Tabs defaultValue="ai" className="w-full">
-        <TabsList className="w-full max-w-md grid grid-cols-3 h-10 p-1 bg-muted/20 rounded-md mx-auto">
-          <TabsTrigger value="ai" className="rounded-sm text-xs">AI & Data Systems</TabsTrigger>
-          <TabsTrigger value="dashboards" className="rounded-sm text-xs">Dashboards & Visualization</TabsTrigger>
-          <TabsTrigger value="infra" className="rounded-sm text-xs">Custom Infrastructure</TabsTrigger>
-        </TabsList>
+      <TabsList className="w-full max-w-xl mx-auto grid grid-cols-3 gap-2 bg-muted/20 p-1 rounded-lg">
+  <TabsTrigger
+    value="ai"
+    className="text-xs font-medium py-2 px-3 text-muted-foreground rounded-md transition-colors duration-200 hover:text-primary hover:bg-muted/40 data-[state=active]:text-primary data-[state=active]:bg-background"
+  >
+    AI & Data Systems
+  </TabsTrigger>
+
+  <TabsTrigger
+    value="dashboards"
+    className="text-xs font-medium py-2 px-3 text-muted-foreground rounded-md transition-colors duration-200 hover:text-primary hover:bg-muted/40 data-[state=active]:text-primary data-[state=active]:bg-background"
+  >
+    Dashboards & Visualization
+  </TabsTrigger>
+
+  <TabsTrigger
+    value="infra"
+    className="text-xs font-medium py-2 px-3 text-muted-foreground rounded-md transition-colors duration-200 hover:text-primary hover:bg-muted/40 data-[state=active]:text-primary data-[state=active]:bg-background"
+  >
+    Custom Infrastructure
+  </TabsTrigger>
+</TabsList>
 
         {/* RAG SYSTEM */}
         <TabsContent value="ai" className="mt-12">
