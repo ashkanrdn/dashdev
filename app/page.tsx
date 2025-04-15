@@ -511,21 +511,23 @@ export default function Home() {
             </div>
 
             <div className="relative aspect-[4/3] overflow-hidden rounded-md border border-border/40 bg-card/30">
-              <Image
-                src="/case-rag.png"
-                alt="World Bank RAG system"
-                width={800}
-                height={600}
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-4">
-                <Button variant="outline" size="sm" className="h-8 text-xs gap-1.5 rounded-md">
-                  <span>View case study</span>
-                  <ExternalLink className="h-3.5 w-3.5" />
-                </Button>
-              </div>
-            </div>
+            <video
+    src="/wb_rag.mp4"
+
+    muted
+    loop
+    autoPlay
+    playsInline
+    className="object-cover w-full h-full"
+  />
+  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+  <div className="absolute bottom-0 left-0 right-0 p-4">
+    <Button variant="outline" size="sm" className="h-8 text-xs gap-1.5 rounded-md">
+      <span>View case study</span>
+      <ExternalLink className="h-3.5 w-3.5" />
+    </Button>
+  </div>
+</div>
           </div>
         </TabsContent>
 
@@ -570,19 +572,21 @@ export default function Home() {
             </div>
 
             <div className="relative aspect-[4/3] overflow-hidden rounded-md border border-border/40 bg-card/30">
-              <Image
-                src="/case-mdb.png"
-                alt="MDB Watchdog Dashboard"
-                width={800}
-                height={600}
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-4">
-                <Button variant="outline" size="sm" className="h-8 text-xs gap-1.5 rounded-md">
-                  <span>View case study</span>
-                  <ExternalLink className="h-3.5 w-3.5" />
-                </Button>
+            <video
+    src="/mdb_watchdog.mp4"
+ 
+    muted
+    loop
+    autoPlay
+    playsInline
+    className="object-cover w-full h-full"
+  />
+  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+  <div className="absolute bottom-0 left-0 right-0 p-4">
+    <Button variant="outline" size="sm" className="h-8 text-xs gap-1.5 rounded-md">
+      <span>View case study</span>
+      <ExternalLink className="h-3.5 w-3.5" />
+    </Button>
               </div>
             </div>
           </div>
@@ -727,9 +731,9 @@ export default function Home() {
         <section className="py-24 border-t border-border/40">
           <div className="container">
             <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-3xl font-light tracking-tight">Ready to harness the power of AI?</h2>
+              <h2 className="text-3xl font-light tracking-tight">Build AI-powered systems for risk, insight, and action.</h2>
               <p className="mt-4 text-muted-foreground">
-                Schedule a consultation with our experts to discuss how our AI solutions can transform your business.
+              Let's explore your needs and design a solution together.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
                 <Button className="group h-11 px-6 rounded-md">
