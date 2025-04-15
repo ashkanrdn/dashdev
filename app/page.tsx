@@ -356,7 +356,6 @@ export default function Home() {
   </div>
 </section>
 
-{/*  Approach Section */}
 <section id="approach" className="py-28 border-t border-border/40 bg-background">
   <div className="container">
     <div className="max-w-2xl mx-auto text-center">
@@ -367,6 +366,7 @@ export default function Home() {
     </div>
 
     <div className="mt-20">
+      {/* Desktop Horizontal Layout */}
       <div className="hidden md:flex justify-between items-start relative">
         {/* Connecting line */}
         <div className="absolute top-6 left-0 right-0 h-px bg-border/40 z-0" />
@@ -397,17 +397,22 @@ export default function Home() {
               "We deploy scalable, open-source solutions aligned with your infrastructure — secure, flexible, and future-proof.",
           },
         ].map((item, i) => (
-          <div key={i} className="relative w-1/4 text-center px-4 z-10">
-            <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full border border-border bg-card text-sm font-medium">
+          <div
+            key={i}
+            className="relative w-1/4 text-center px-4 z-10 transition-transform duration-200 hover:-translate-y-1 group"
+          >
+            <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full border border-border bg-card text-sm font-medium transition-colors group-hover:border-primary group-hover:text-primary">
               {item.step}
             </div>
-            <h3 className="text-base font-semibold text-foreground">{item.title}</h3>
+            <h3 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors">
+              {item.title}
+            </h3>
             <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{item.description}</p>
           </div>
         ))}
       </div>
 
-      {/* Mobile layout: vertical stack */}
+      {/* Mobile Vertical Layout */}
       <div className="space-y-12 md:hidden mt-12">
         {[
           {
